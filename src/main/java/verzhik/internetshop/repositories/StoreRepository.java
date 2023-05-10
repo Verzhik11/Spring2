@@ -3,6 +3,7 @@ package verzhik.internetshop.repositories;
 import org.springframework.stereotype.Repository;
 import verzhik.internetshop.objects.Item;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -16,6 +17,7 @@ public class StoreRepository {
     public StoreRepository(Map<Integer, Item> store) {
         this.store = new HashMap<>();
     }
+    @PostConstruct
     public void init () {
         store.put(idCounter, new Item("Холодильник", idCounter++));
         store.put(idCounter, new Item("Диван", idCounter++));

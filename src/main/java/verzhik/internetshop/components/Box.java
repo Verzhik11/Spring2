@@ -1,4 +1,4 @@
-package verzhik.internetshop.objects;
+package verzhik.internetshop.components;
 
 
 import org.springframework.stereotype.Component;
